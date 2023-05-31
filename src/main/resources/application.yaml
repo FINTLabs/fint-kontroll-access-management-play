@@ -4,3 +4,13 @@ spring:
       resourceserver:
         jwt:
           issuer-uri: https://idp.felleskomponent.no/nidp/oauth/nam
+logging:
+  level:
+    root: INFO
+    org.apache.kafka: INFO
+springdoc:
+  swagger-ui:
+    path: /api/swagger/
+    enabled: true
+  api-docs:
+    path: /api/api-docs/
