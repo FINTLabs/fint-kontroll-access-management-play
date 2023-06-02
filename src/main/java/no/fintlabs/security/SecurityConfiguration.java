@@ -1,6 +1,7 @@
 package no.fintlabs.security;
 
 import no.vigoiks.resourceserver.security.FintJwtUserConverter;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.config.annotation.web.reactive.EnableWebFluxSecurity;
@@ -11,12 +12,15 @@ import org.springframework.security.web.server.SecurityWebFilterChain;
 @EnableWebFluxSecurity
 public class SecurityConfiguration {
 
+    @Autowired
+    private OpaAuthorizationManager opaAuthorizationManager;
+
     @Bean
     SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
         http
                 .authorizeExchange()
                         .pathMatchers("/**")
-                        .access(new OpaAuthorizationManager())
+                        .access(opaAuthorizationManager)
                 .anyExchange()
                 .authenticated()
                 .and()
