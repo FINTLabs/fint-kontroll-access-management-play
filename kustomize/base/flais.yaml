@@ -9,7 +9,7 @@ spec:
   imagePullPolicy: Always
   url:
     hostname: 'kontroll.vigoiks.no'
-    basePath: '/beta/fintlabs-no/api/access-management-play'
+    basePath: '/beta/fintlabs-no'
   ingress:
     enabled: true
     basePath: '/beta/fintlabs-no/api/access-management-play'
