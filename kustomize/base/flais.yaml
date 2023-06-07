@@ -8,8 +8,8 @@ spec:
   image: ghcr.io/fintlabs/fint-kontroll-access-management-play:latest
   imagePullPolicy: Always
   url:
-    hostname: 'kontroll-tilgang-test.vigoiks.no'
-    basePath: '/beta/fintlabs-no'
+    hostname: 'kontroll.vigoiks.no'
+    basePath: '/beta/fintlabs-no/api/access-management-play'
   ingress:
     enabled: true
     basePath: '/beta/fintlabs-no/api/access-management-play'
