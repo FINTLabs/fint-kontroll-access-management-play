@@ -13,4 +13,4 @@ commonLabels:
 patches:
   - path: opa.patch.yaml
     target:
-      kind: Deployment
+      kind: Application
