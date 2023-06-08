@@ -9,3 +9,8 @@ commonLabels:
   app.kubernetes.io/part-of: fint-kontroll
   fintlabs.no/team: bas
   fintlabs.no/org-id: fintlabs.no
+
+patches:
+  - path: opa.patch.yaml
+    target:
+      kind: Deployment

@@ -3,30 +3,20 @@ kind: Application
 metadata:
   name: fint-kontroll-access-management-play
 spec:
-  containers:
-    #  port: 8080
-    - name: fint-kontroll-access-management-play
-      orgId: fintlabs.no
-      image: ghcr.io/fintlabs/fint-kontroll-access-management-play:latest
-      imagePullPolicy: Always
-      url:
-        hostname: 'kontroll.vigoiks.no'
-        basePath: '/beta/fintlabs-no'
-      ingress:
-        enabled: true
-        basePath: '/beta/fintlabs-no/api/access-management-play'
-        middlewares:
-          - fint-kontroll-sso
-      env:
-        - name: TZ
-          value: Europe/Oslo
-        - name: JAVA_TOOL_OPTIONS
-          value: '-XX:+ExitOnOutOfMemoryError -Xmx480M -verbose:gc'
-
-    - name: opa
-      image: openpolicyagent/opa:latest
-      args:
-        - "run"
-        - "--server"
-        - "--addr=localhost:8181"
-        - "--log-level=info"
+  #  port: 8080
+  orgId: fintlabs.no
+  image: ghcr.io/fintlabs/fint-kontroll-access-management-play:latest
+  imagePullPolicy: Always
+  url:
+    hostname: 'kontroll.vigoiks.no'
+    basePath: '/beta/fintlabs-no'
+  ingress:
+    enabled: true
+    basePath: '/beta/fintlabs-no/api/access-management-play'
+    middlewares:
+      - fint-kontroll-sso
+  env:
+    - name: TZ
+      value: Europe/Oslo
+    - name: JAVA_TOOL_OPTIONS
+      value: '-XX:+ExitOnOutOfMemoryError -Xmx480M -verbose:gc'
