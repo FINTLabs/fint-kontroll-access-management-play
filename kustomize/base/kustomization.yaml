@@ -12,3 +12,6 @@ commonLabels:
 
 patches:
   - path: opa.patch.yaml
+    target:
+      kind: Application
+      name: fint-kontroll-access-management-play
