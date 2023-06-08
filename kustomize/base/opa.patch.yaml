@@ -1,13 +1,15 @@
-apiVersion: v1
-kind: Pod
+apiVersion: apps/v1
+kind: Deployment
 metadata:
   name: opa-sidecar
 spec:
-  containers:
-    - name: opa
-      image: openpolicyagent/opa:latest
-      args:
-        - "run"
-        - "--server"
-        - "--addr=localhost:8181"
-        - "--log-level=info"
+  template:
+    spec:
+      containers:
+        - name: opa
+          image: openpolicyagent/opa:latest
+          args:
+            - "run"
+            - "--server"
+            - "--addr=localhost:8181"
+            - "--log-level=info"
