@@ -10,7 +10,5 @@ commonLabels:
   fintlabs.no/team: bas
   fintlabs.no/org-id: fintlabs.no
 
-patches:
-  - path: opa.patch.yaml
-    target:
-      kind: Application
+patchesStrategicMerge:
+  - opa.patch.yaml
