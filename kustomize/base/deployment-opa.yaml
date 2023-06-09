@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fint-kontroll-opa
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: fint-kontroll-opa
+    spec:
+      containers:
+        - name: fine-kontroll-opa
+          image: openpolicyagent/opa:latest
+          ports:
+            - name: http
+              containerPort: 8181
+          args:
+            - "run"
+            - "--server"
+            - "--ignore=.*"  # exclude hidden dirs created by Kubernetes
+            - "--log-level=info"
+#            - "/policies"
+  selector:
+    matchLabels:
+      app: fint-kontroll-opa
+
+
+#          volumeMounts:
+#            - readOnly: true
+#              mountPath: /policies
+#              name: example-policy
+#      volumes:
+#        - name: example-policy
+#          configMap:
+#            name: example-policy
