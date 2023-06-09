@@ -5,11 +5,8 @@ metadata:
   labels:
     app: fint-kontroll-opa
 spec:
-  type: NodePort
+  type: ClusterIP
   selector:
     app: fint-kontroll-opa
   ports:
-    - name: http
-      protocol: TCP
-      port: 8181
-      targetPort: 8181
+    - port: 8181

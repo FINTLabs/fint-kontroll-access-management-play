@@ -10,7 +10,7 @@ import java.util.Map;
 @Component
 public class OpaClient {
     //TODO: Move to configuration
-    private String opaUrl = "http://localhost:8181/v1/data/accessmanagement/allow";
+    private String opaUrl = "http://fint-kontroll-opa:8181/v1/data/accessmanagement/allow";
     private RestTemplate restTemplate = new RestTemplate();
     public OpaClient() {
     }
