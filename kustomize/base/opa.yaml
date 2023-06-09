@@ -1,0 +1,34 @@
+apiVersion: fintlabs.no/v1alpha1
+kind: Application
+metadata:
+  name: fint-kontroll-opa
+  labels:
+    app.kubernetes.io/component: opa
+    app.kubernetes.io/name: fint-kontroll-opa
+    app.kubernetes.io/instance: fint-kontroll-opa_fintlabs-no
+spec:
+  #  port: 8080
+  orgId: fintlabs.no
+  image: openpolicyagent/opa:latest
+  imagePullPolicy: Always
+  args:
+    - "run"
+    - "--server"
+    - "--addr=localhost:8181"
+    - "--log-level=info"
+
+#apiVersion: apps/v1
+#kind: Deployment
+#metadata:
+#  name: opa-sidecar
+#spec:
+#  template:
+#    spec:
+#      containers:
+#        - name: opa
+#          image: openpolicyagent/opa:latest
+#          args:
+#            - "run"
+#            - "--server"
+#            - "--addr=localhost:8181"
+#            - "--log-level=info"

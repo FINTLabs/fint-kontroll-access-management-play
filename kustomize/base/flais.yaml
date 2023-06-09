@@ -2,6 +2,10 @@ apiVersion: fintlabs.no/v1alpha1
 kind: Application
 metadata:
   name: fint-kontroll-access-management-play
+  labels:
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/name: fint-kontroll-access-management-play
+    app.kubernetes.io/instance: fint-kontroll-access-management-play_fintlabs-no
 spec:
   #  port: 8080
   orgId: fintlabs.no
