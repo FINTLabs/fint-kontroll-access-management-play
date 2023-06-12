@@ -24,7 +24,7 @@ spec:
             - "--ignore=.*"  # exclude hidden dirs created by Kubernetes
             - "--log-level=info"
             - "--set=decision_logs.console=true"
-            - "--set=bundle.name=main.tar.gz"
-            - "--set=bundle-service-url=http://fint-kontroll-opa-bundle-server"
-            - "--set=bundle-polling-min-delay=10s"
-            - "--set=bundle-polling-max-delay=10s"
+            - "--set=bundles.main.resource=/bundles/main.tar.gz"
+            - "--set=services.main.url=http://fint-kontroll-opa-bundle-server"
+            - "--set=bundles.main.polling.min_delay_seconds=10"
+            - "--set=bundles.main.polling.max_delay_seconds=20"
