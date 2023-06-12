@@ -3,15 +3,11 @@ kind: Kustomization
 resources:
   - flais.yaml
   - deployment-opa.yaml
+  - deployment-opa-bundle-server.yaml
   - service-opa.yaml
+  - service-opa-bundle-server.yaml
 commonLabels:
   app.kubernetes.io/version: "latest"
   app.kubernetes.io/part-of: fint-kontroll
   fintlabs.no/team: bas
   fintlabs.no/org-id: fintlabs.no
-
-#patches:
-#  - path: opa.patch.yaml
-#    target:
-#      kind: Deployment
-#      name: fint-kontroll-access-management-play

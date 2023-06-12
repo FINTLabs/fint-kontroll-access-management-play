@@ -4,13 +4,16 @@ metadata:
   name: fint-kontroll-opa
 spec:
   replicas: 1
+  selector:
+    matchLabels:
+      app: fint-kontroll-opa
   template:
     metadata:
       labels:
         app: fint-kontroll-opa
     spec:
       containers:
-        - name: fine-kontroll-opa
+        - name: fint-kontroll-opa
           image: openpolicyagent/opa:latest
           ports:
             - name: http
@@ -20,17 +23,8 @@ spec:
             - "--server"
             - "--ignore=.*"  # exclude hidden dirs created by Kubernetes
             - "--log-level=info"
-#            - "/policies"
-  selector:
-    matchLabels:
-      app: fint-kontroll-opa
-
-
-#          volumeMounts:
-#            - readOnly: true
-#              mountPath: /policies
-#              name: example-policy
-#      volumes:
-#        - name: example-policy
-#          configMap:
-#            name: example-policy
+            - "--set=decision_logs.console=true"
+            - "--set=bundle.name=main.tar.gz"
+            - "--set=bundle-service-url=http://fint-kontroll-opa-bundle-server"
+            - "--set=bundle-polling-min-delay=10s"
+            - "--set=bundle-polling-max-delay=10s"

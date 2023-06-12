@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fint-kontroll-opa-bundle-server
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: fint-kontroll-opa-bundle-server
+  template:
+    metadata:
+      labels:
+        app: fint-kontroll-opa-bundle-server
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:latest
+          volumeMounts:
+            - name: bundle-volume
+              mountPath: /usr/share/nginx/html
+      volumes:
+        - name: bundle-volume
+          configMap:
+            name: fint-kontroll-opa-bundle

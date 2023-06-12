@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fint-kontroll-opa-bundle
+data:
+  main.tar.gz: |
+    H4sIAIb9hmQAA+1Z3W/iRhDn9fxXrMhLKyGDP2kjRWqri/pSqSdd+hRFaIHFbLB3
+    3d31pbmI/72zu4YYMAchsdNTGSlZzMzOb752xjZuv9M4DQaDYRQhs8Z2HfihXUtC
+    XhiGXgTsQYAGXuBHXgdFzZvW6RRSYQGmZFwowiRPx0QkNXIgNpt9Q0/px3r9Tsjt
+    40LNXUES3hgGxCMOw735h9R7Ov+BF8d+FA8h/xEUTAcNGrOoQv/z/Od4ssAJQXgy
+    IVJmmMFFRphyHJrlEBI0K1QhiLsgjw9cTKU74UxhyuQ+Pp3t5bAVZ4oVdvW/Bfyl
+    PHELScQIS0kTpsHlXkHBUzLSFcsF/YoV5Wy/rFEqJzwn0rlAvz2iKZnhIlU9+MAe
+    kSB/F0Qq6ToXJQPhNOUP6PIKzXAqiQO7fjXfqLkOkEZDdGautG5EJUoEZopMUU5E
+    RsF+kFBcX824yCr7XK3sI0mRB6vnos/3ZLFAPENjUSxA1YwyZsz0d3gSgdMpQXMs
+    kKJpglkCckFFboevVwR+CyzvwaIfEgJO54VCXH75cWWJD2u4a4lWw0VSMKpAIKoX
+    qOLkWM37haAogzjw8T2ZKPWYE8STtR7ts+Psi7K9fnI+XHjOB8mzVXQZ2i6LW8rA
+    C5PYOwcBXfhmMZt0aehNNSVyq3eY2pHlvsAsVp0JlEnu1ZXZ/fyNs3Te+4A2TG6/
+    cmQauhc4cv4HceDHfuzp/h/5wXn+t0F2/o8UdMLGbgIOzf+Bb/MfBXHkmfzHnjc8
+    z/826OD8N2PVtM6Nb745seumNMyAGygyNMESVDm64Eam849gVI4EThhNp6M5ZpIw
+    GAa6PdvB8EDV3HZqhGXJ0dTVJnQvUbfc69q9v3yhC8Jcxru9Z9F1Q9fyv1/fdA1r
+    Ce192xBbBi8zwO45CZjxKjjjbET+oRK0qZEZghYNpI61ZUfFC81673o8U7u0Of/N
+    6b2XnL0pxoH+P4yH/tb8HwZhcO7/bZBtId3tdg59odJc9nXYS3S7FtL0tHFlt+rJ
+    obsMzvOULswDiSwfHySeZpRBr4JexEWlP61326c3jeP1kN9DQQ+Fdxtiy/XVXaW/
+    bXfkUw19gYFRD8U9NDzeOresNbAy4XQh3yege+21E8Gq6NYM9M0KOWzMEa7tTKUa
+    B+BBU3P7OKd9XbSyu+lArxGQ/hOdLptGspltA6Q9dwxSPyPZuIVUCSJ5ISYtBHEF
+    1Eogq225PajXu/bpz8+t+fbpr3Z9+3j9x/XNdauQR6SvfN/WeJmscOqcqp14+2dq
+    A2Phe2wDx5yVt/HriJPyhn4dd07a7af/rVOyc591wp3VprFdOjX3hwo/gy6PPIz1
+    mqqKNuyt/MSyabW3q+v5pwGt07yv6G1J2IAB2/v5py0eZZO0mBJZjEsRJQpS655/
+    CFoHuRno4CB0WejNwIeH4FcwjaBHr0c/GTt+g8CfDD58Za2/DNiev/ObujOd6Uyv
+    pn8Bgq07twAmAAA=
+
