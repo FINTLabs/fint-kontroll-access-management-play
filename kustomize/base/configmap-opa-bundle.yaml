@@ -2,7 +2,7 @@ apiVersion: v1
 kind: ConfigMap
 metadata:
   name: fint-kontroll-opa-bundle
-data:
+binaryData:
   main.tar.gz: |
     H4sIAIb9hmQAA+1Z3W/iRhDn9fxXrMhLKyGDP2kjRWqri/pSqSdd+hRFaIHFbLB3
     3d31pbmI/72zu4YYMAchsdNTGSlZzMzOb752xjZuv9M4DQaDYRQhs8Z2HfihXUtC
