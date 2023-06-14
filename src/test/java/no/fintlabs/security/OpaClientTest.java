@@ -6,7 +6,6 @@ import org.springframework.web.client.RestTemplate;
 import java.util.Map;
 
 import static org.assertj.core.api.Assertions.assertThat;
-import static org.junit.jupiter.api.Assertions.assertTrue;
 import static org.mockito.ArgumentMatchers.any;
 import static org.mockito.ArgumentMatchers.isA;
 import static org.mockito.Mockito.mock;
@@ -26,8 +25,6 @@ public class OpaClientTest {
         assertThat(isAuthorized).isTrue();
 
         verify(restTemplate).postForObject(isA(String.class), isA(Map.class), any());
-
-        assertTrue(false);
     }
 
     @Test
