@@ -40,6 +40,7 @@ dependencies {
     implementation 'io.netty:netty-resolver-dns-native-macos:4.1.89.Final:osx-aarch_64'
 
     implementation 'no.fintlabs:fint-resource-server-security:1.1.0'
+    implementation 'no.fintlabs:fint-kontroll-authorization:1.0.1'
 
     compileOnly 'org.projectlombok:lombok'
 

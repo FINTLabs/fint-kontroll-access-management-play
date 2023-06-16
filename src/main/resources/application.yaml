@@ -14,3 +14,9 @@ springdoc:
     enabled: true
   api-docs:
     path: /api/api-docs/
+
+# Override default OPA url for use locally
+fint:
+  kontroll:
+    opa:
+      url: http://localhost:8181/v1/data/accessmanagement/allow
